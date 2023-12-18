@@ -1,0 +1,21 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "grenache-grape": "^0.9.12",
+    "grenache-nodejs-link": "^1.0.0",
+    "grenache-nodejs-ws": "^0.7.10"
+  }
+}
