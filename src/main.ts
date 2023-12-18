@@ -53,7 +53,7 @@ function sendNewOrder() {
   
   // Creating a new order with random values
   const newORder: Order = {
-    client: 1,
+    client: port,
     asset: 'BTCUSD',
     quantity: getRandom(1,11),
     command: command,
