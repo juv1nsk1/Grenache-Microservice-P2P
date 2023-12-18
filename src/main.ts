@@ -62,12 +62,12 @@ function sendNewOrder() {
       
   const payload = { order: newORder}   
   // Making a request to the order book service with the new order
-  peerClient.request(serviceName,  payload,   { timeout: 50000 }, (err:any, result:string) => {    
+  peerClient.map(serviceName,  payload,   { timeout: 50000 }, (err:any, result:string) => {    
     if (err) throw err
     console.log(result)    
   })
 
-  // Backlog: Replace it with a broadcast send that sends each order to all available services
+  
 }
 
 
@@ -83,32 +83,3 @@ function getRandom (min:number,max:number) : number {
   return Math.floor( Math.random() * (max - min + 1)) + min
 }
 
-
-
-// function broadcast() {
-//   const commands=[CommandType.Ask,CommandType.Bid]
-//   const command=commands[getRandom(0,1)]
-  
-//   const newORder: Order = {
-//     client: 1,
-//     asset: 'ABC',
-//     quantity: 100,
-//     command: command,
-//     price: getRandom(10,15),
-//   }      
-  
-//   const payload = { order: newORder}  
-//   const peer2 = new PeerRPCClient(link, {})
-//   peer2.init()
-  
-
-//   linkClient.lookup(serviceName, {}, (err:any, peers:any) => {    
-//     peers.forEach((peerInfo:any) => {  
-//       const peerClient = peer2.connect(peerInfo)
-//       peerClient.request (serviceName,  payload,   { timeout: 50000 }, (err:any, result:string) => {    
-//         if (err) throw err    
-//         console.log(result)        
-//       })
-//   })
-//   })
-// }
